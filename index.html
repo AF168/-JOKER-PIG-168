@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>My LIFF App</title>
+</head>
+<body>
+    <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
+    <script>
+        async function main() {
+                                         // Liff ID
+            await liff.init({ liffId: "1657745909-pv2E5BNz" })
+            await liff.shareTargetPicker([
+                {
+                    type: "flex",
+                    // ข้อความก่อนกดอ่าน
+                    altText: "โค้ดฟรีมาแล้ว!! รีบรับเลย",
+                    contents: 
+                    // โค้ดจาก line bot designer
+                    {
+  "type": "bubble",
+  "hero": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://cdn.discordapp.com/attachments/1047972784199970887/1053391018390732829/Untitled-1.png",
+            "size": "full",
+            "aspectRatio": "10.40:10.40"
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "color": "#ffffff",
+            "weight": "bold",
+            "align": "center",
+            "offsetTop": "md",
+            "text": "❤️ แจกทุนฟรี 50.- ❤️"
+          },
+          {
+            "type": "text",
+            "text": "ไม่ต้องฝากก่อน รับได้ทุกคน",
+            "color": "#ffffff",
+            "align": "center",
+            "offsetTop": "md"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "button",
+                "action": {
+                  "type": "uri",
+                  "label": "คลิก",
+                  "uri": "https://lin.ee/lAJU7k4"
+                },
+                "color": "#ffcc00",
+                "margin": "none",
+                "style": "primary"
+              }
+            ],
+            "cornerRadius": "xs",
+            "paddingAll": "xxl",
+            "paddingBottom": "xs"
+          }
+        ]
+      }
+    ],
+    "backgroundColor": "#339966",
+    "paddingAll": "md"
+  }
+}
+                }
+            ])
+            liff.closeWindow()
+        }
+        main()
+    </script>
+</body>
+</html>
